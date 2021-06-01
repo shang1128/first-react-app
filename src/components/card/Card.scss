@@ -1,0 +1,31 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #c7c7c7;
+    background-color: #fff;
+    padding: 10px;
+    width: 200px;
+    height: 240px;
+
+    img{
+        width: 170px;
+        height: 100px;
+    }
+    .price {
+        display: flex;
+        gap: 10px;
+
+        p:first-child{
+            color: #f60000;
+        }
+        p:last-child{
+            color: #c7c7c7;
+            text-decoration: line-through;
+        }
+    }
+    .star{
+        display: flex;
+        color: #fbd602;
+    }
+}

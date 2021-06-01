@@ -1,5 +1,7 @@
 import Container from '../container/Container';
 import './Header.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 function Header(){
 return (
@@ -11,9 +13,10 @@ return (
         <span>USD</span>
     </div>
     <div className="account">
-        <span>My Profile</span>
-        <span>0 Items</span>
-        <span>$0.00</span>
+        <a> <FontAwesomeIcon icon="user" /> My Profile</a>
+        <a> <FontAwesomeIcon icon="shopping-basket" /> 0 Items</a>
+        <a>$0.00</a>
+        <FontAwesomeIcon icon="search" />
     </div>
     </div>
     <h1>RAKUTECH</h1>

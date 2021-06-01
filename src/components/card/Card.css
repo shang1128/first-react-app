@@ -1,0 +1,46 @@
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+  padding: 10px;
+  width: 200px;
+  height: 240px;
+}
+
+.card img {
+  width: 170px;
+  height: 100px;
+}
+
+.card .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.card .price p:first-child {
+  color: #f60000;
+}
+
+.card .price p:last-child {
+  color: #c7c7c7;
+  text-decoration: line-through;
+}
+
+.card .star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fbd602;
+}
+/*# sourceMappingURL=Card.css.map */
