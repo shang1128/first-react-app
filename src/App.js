@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Container from './components/container/Container'
@@ -7,6 +6,7 @@ import Card from './components/card/Card';
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faSearch, faShoppingBasket, faStar, faUser } from '@fortawesome/free-solid-svg-icons'
+import DisplayProduct from './components/displayProduct/DisplayProduct';
 
 
 library.add(
@@ -58,6 +58,7 @@ function App() {
       </div>
     
     </Container>
+    <DisplayProduct />
     <Footer />
     </div>
 
