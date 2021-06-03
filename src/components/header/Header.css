@@ -16,7 +16,6 @@
           flex: 4;
   gap: 20px;
 }
-
 .selection select {
   border: none;
   background: transparent;
@@ -50,13 +49,11 @@ ul {
           justify-content: center;
   gap: 70px;
 }
-
 ul li {
   list-style-type: none;
 }
 
-ul li a {
+.active {
   text-decoration: none;
   color: #000;
-}
-/*# sourceMappingURL=Header.css.map */
+}/*# sourceMappingURL=Header.css.map */

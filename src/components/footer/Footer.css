@@ -7,7 +7,6 @@
           justify-content: center;
   gap: 40px;
 }
-
 .footer-nav .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,5 +18,4 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-/*# sourceMappingURL=Footer.css.map */
+}/*# sourceMappingURL=Footer.css.map */

@@ -3,11 +3,15 @@ import Footer from './components/footer/Footer';
 import Container from './components/container/Container'
 import './App.scss';
 import Card from './components/card/Card';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser } from '@fortawesome/free-solid-svg-icons'
-import DisplayProduct from './components/displayProduct/DisplayProduct';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import DisplayProduct from './components/displayProduct/DisplayProduct';
+import Login from './components/login/Login';
+
+
 
 
 library.add(
@@ -49,9 +53,12 @@ function App() {
   ]
   return (
     <div className="App">
-      <Header />
-      <Container>
+      <Router>
+     <Header />
 
+     <Route exact path="/">
+     <Container>
+      
       <div className="card-container">
       {
         items.map(item => {
@@ -61,8 +68,15 @@ function App() {
       </div>
     
     </Container>
-    <DisplayProduct />
+
+     </Route>
+     
+    <Route exact path='/DisplayProduct'  component={DisplayProduct} />
+   
+    <Route exact path='/Login' component={Login} />
+    
     <Footer />
+    </Router>
     </div>
 
   );
