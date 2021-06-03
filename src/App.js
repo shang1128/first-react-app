@@ -5,16 +5,19 @@ import './App.scss';
 import Card from './components/card/Card';
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faSearch, faShoppingBasket, faStar, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser } from '@fortawesome/free-solid-svg-icons'
 import DisplayProduct from './components/displayProduct/DisplayProduct';
+import { far } from '@fortawesome/free-regular-svg-icons';
 
 
 library.add(
-    
+    far,
     faStar,
     faUser,
     faShoppingBasket,
-    faSearch
+    faSearch,
+    faHeart,
+    faShoppingCart
 )
 
 function App() {

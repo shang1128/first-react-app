@@ -9,25 +9,25 @@ return (
 <Container>
     <div className="header-top">
     <div className="selection">
-        <span>EN</span>
-        <span>USD</span>
+        <span>EN <select name="" id="" /></span>
+        <span>USD <select name="" id="" /></span>
     </div>
     <div className="account">
-        <a> <FontAwesomeIcon icon="user" /> My Profile</a>
-        <a> <FontAwesomeIcon icon="shopping-basket" /> 0 Items</a>
-        <a>$0.00</a>
+        <p> <FontAwesomeIcon icon="user" /> My Profile</p>
+        <p> <FontAwesomeIcon icon="shopping-basket" /> 0 Items</p>
+        <p>$0.00</p>
         <FontAwesomeIcon icon="search" />
     </div>
     </div>
     <h1>RAKUTECH</h1>
     <nav>
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">STORE</a></li>
-            <li><a href="#">IPHONE</a></li>
-            <li><a href="#">IPAD</a></li>
-            <li><a href="#">MACBOOK</a></li>
-            <li><a href="#">ACCESORIES</a></li>
+            <li>HOME</li>
+            <li>STORE</li>
+            <li>IPHONE</li>
+            <li>IPAD</li>
+            <li>MACBOOK</li>
+            <li>ACCESORIES</li>
 
         </ul>
     </nav>

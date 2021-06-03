@@ -7,6 +7,7 @@ function Card(props) {
 return (
         <div className="card">
                 <img src={cardImage} alt="Macbook" />
+                
                 <p>{ props.name }</p>
                 <Star rate={props.rate} />
                 <div className="price">

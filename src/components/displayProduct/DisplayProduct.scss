@@ -14,7 +14,8 @@
         img{
             width: 370px;
             height: 450px;
-            object-fit: contain;
+            object-fit:contain;
+            margin-bottom: 5px;
         }
         .product-small-images{
             display: flex;
@@ -32,11 +33,20 @@
     .product-details{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        // justify-content: space-between;
         width: 450px;
-        height: 513px;
+        // height: 513px;
+        padding:0;
         // border: 1px solid blue;
 
+
+        .hr{
+          width: 100%;
+          border-bottom: 0px solid #f3f3f3;
+        }
+        h3{
+          margin-top: 0;
+        }
         .free{
             font-weight: bold;
         }
@@ -44,11 +54,33 @@
             display: flex;
             align-items: center;
             gap: 10px;
+
+            p{
+              color: #a0a0a0;
+            }
+            p:last-child{
+              color: #379efa;
+              font-weight: bold;
+            }
+            svg{
+              font-size: 8pt;
+              margin-right: 5px;
+            }
         }
         .price{
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+
+            p:first-child{
+              font-size: 20pt;
+              color: #f83f38;
+            }
+            p:last-child{
+              font-size: 20pt;
+              color: #b6b6b6;
+              text-decoration: line-through;
+            }
         }
         .stock{
             display: flex;
@@ -168,6 +200,9 @@
             select{
                 height: 30px;
                 width: 100px;
+                border: 1px solid #b6b6b6;
+                border-radius: 3px;
+                background: transparent;
             }
             p{
                 font-weight: bold;
@@ -176,9 +211,11 @@
         .btn-option{
             display: flex;
             justify-content: space-between;
+            margin: 5px 0;
             
             .btn-counter{
-                
+                display: flex;
+                align-items: center;
                 
                 input{
                     width: 35px;
@@ -186,11 +223,17 @@
                     border: none;
                     font-size: 13pt;
                     text-align: center;
+                    background: #f6f7f8;
+
                 }
                 button{
                     border: none;
                     width: 35px;
                     height: 35px;
+                    color: #379efa;
+                    background: #f6f7f8;
+                    font-weight: bolder;
+                    font-size: 14pt;
                 }
             }
             .btn-add-heart{
@@ -198,10 +241,29 @@
                 align-items: center;
                 gap: 10px;
 
-                button{
-                    padding: 9px 18px;
+                button:first-child{
+                    padding: 17px 18px;
                     border: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    background: #eaf5fe;
+                    color: #379efa;
+                    font-weight: bold;
+
+                    svg{
+                      color: #379efa;
+                    }
                 }
+                button:last-child{
+                  padding: 17px 18px;
+                  border: none;
+                  background: #eaf5fe;
+
+                  svg{
+                    color: #379efa;
+                  }
+              }
             }
         }
     }

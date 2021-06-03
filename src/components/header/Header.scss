@@ -1,18 +1,25 @@
 
 .header-top {
     display: flex;
+    align-items: center;
 }
 
 .selection {
     display: flex;
     flex: 4;
     gap: 20px;
+
+    select{
+        border: none;
+        background: transparent;
+    }
 }
 
 .account {
     display: flex;
-    flex: 1;
+    flex: 1.2;
     justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
@@ -22,7 +29,7 @@ h1 {
 ul {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 70px;
 
     li {
         list-style-type: none;

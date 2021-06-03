@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Container from '../container/Container';
 import './DisplayProduct.scss';
 import Star from '../star/Star';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 import imgba from '../../raw-images/ba.png';
 import imgbb from '../../raw-images/bb.png';
@@ -17,9 +19,21 @@ function DisplayProduct(props){
     const imagesBlack = [imgba,imgbb,imgbc,imgbd];
     const imagesWhite = [imgwa,imgwb,imgwc,imgwd];
 
-    const [ selectedVariants, setSelectedVariants ] = useState(imagesBlack)
+    const [ selectedVariants, setSelectedVariants ] = useState(imagesBlack);
     const [ selectedImg, setSelectedImg ] = useState(imgba);
 
+    const [count, setCount] = useState(0);
+
+    const incrementBtn = () =>{
+        setCount(count + 1);
+    }
+    const deccrementBtn = () =>{
+
+        if(count>0){
+            setCount(count - 1);
+        }
+        return;
+    }
 
     const onSelectImg = (image) => {
         setSelectedImg(image);
@@ -43,7 +57,7 @@ function DisplayProduct(props){
                 <div className="product-small-images">
                     {
                         selectedVariants.map(img => {
-                            return <img onClick={() => onSelectImg(img)} src={img} />
+                            return <img onClick={() => onSelectImg(img)} src={img} alt={"image"} />
                         })
                     }
                 </div>
@@ -55,9 +69,11 @@ function DisplayProduct(props){
                     <div className="rate-review">
                         <Star rate={4} />
                     <p>0 reviews</p>
-                    <a>Submit a review</a>
+                    <p>Submit a review</p>
                     </div>
-                    
+
+                    <hr className="hr"/>
+
                     <div className="price">
                     <p>$499</p>
                     <p>$599</p>
@@ -73,6 +89,8 @@ function DisplayProduct(props){
 
                     <p className="free">Free Shipping</p>
                     
+                    <hr className="hr"/>
+
                     <div className="color">
                     <p>Select Color:</p>
 
@@ -108,15 +126,21 @@ function DisplayProduct(props){
                                 <option value="">M</option>
                     </select>
                     </div>
+
+                    <hr className="hr"/>
+
                     <div className="btn-option">
                     <div className="btn-counter">
-                    <button>-</button><input type="number" value="2" name="" id="" readOnly /><button>+</button>
+                    <button onClick={deccrementBtn}>-</button>
+                    <input type="number" value={count} name="" id="" readOnly />
+                    <button onClick={incrementBtn}>+</button>
                     </div>
                     <div className="btn-add-heart">
-                    <button>Add to Cart</button>
-                    <button>heart</button>
+                    <button><FontAwesomeIcon icon='shopping-cart' />Add to Cart</button>
+                    <button><FontAwesomeIcon icon={['far', 'heart']} /></button>
                     </div>
                     </div>
+                    <hr className="hr"/>
 
                 </div>
             </div>
