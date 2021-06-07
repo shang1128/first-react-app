@@ -2,6 +2,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Container from './components/container/Container'
 import './App.scss';
+import './fonts/Fonts.css';
 import Card from './components/card/Card';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
