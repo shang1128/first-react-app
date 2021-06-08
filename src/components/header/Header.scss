@@ -2,6 +2,7 @@
 .header-top {
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .selection {
@@ -22,8 +23,9 @@
     align-items: center;
 }
 
-h1 {
+.title{
     text-align: center;
+    margin: 60px;
 }
 
 ul {
@@ -41,4 +43,4 @@ ul {
 .active{
     text-decoration: none;
     color: #000;
-   }
+}

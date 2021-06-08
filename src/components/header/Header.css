@@ -5,6 +5,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 30px;
 }
 
 .selection {
@@ -16,6 +17,7 @@
           flex: 4;
   gap: 20px;
 }
+
 .selection select {
   border: none;
   background: transparent;
@@ -36,8 +38,9 @@
           align-items: center;
 }
 
-h1 {
+.title {
   text-align: center;
+  margin: 60px;
 }
 
 ul {
@@ -49,6 +52,7 @@ ul {
           justify-content: center;
   gap: 70px;
 }
+
 ul li {
   list-style-type: none;
 }
@@ -56,4 +60,5 @@ ul li {
 .active {
   text-decoration: none;
   color: #000;
-}/*# sourceMappingURL=Header.css.map */
+}
+/*# sourceMappingURL=Header.css.map */

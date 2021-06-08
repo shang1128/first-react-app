@@ -1,0 +1,37 @@
+.mid-banner{
+    width: 100%;
+    height: 420px;
+    background: #13b6f6;
+}
+.md-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .md-text{
+        text-align: left;
+        color: #fff;
+        // border: 1px solid red;
+        margin-top: -100px;
+        
+        
+        .md-p{
+            margin: 50px 0;
+            font-size: 15pt;
+            width: 340px;
+        }
+    }
+    .mid-image{
+        position: relative;
+        width: 550px;
+        height: 500px;
+        overflow: hidden;
+        top: -101px;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

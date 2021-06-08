@@ -5,24 +5,41 @@ import './App.scss';
 import './fonts/Fonts.css';
 import Card from './components/card/Card';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons';
+
+import { library} from '@fortawesome/fontawesome-svg-core';
+import { fab, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser, faShippingFast,
+  faDollarSign, faHeadset, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons';
+
 import DisplayProduct from './components/displayProduct/DisplayProduct';
-import Login from './components/login/Login';
+import TopBanner from './components/top-banner/TopBanner';
+import MidNavigation from './components/mid-navigation/MidNavigation';
+import MidBanner from './components/mid-banner/MidBanner';
+import OtherOptions from './components/other-options/OtherOptions';
+import LatestNews from './components/latest-news/LatestNews';
+import FeaturedProducts from './components/featured-products/FeaturedProducts';
+// import Login from './components/login/Login';
 
 
 
 
 library.add(
-    far,
+    fab,
     faStar,
     faUser,
     faShoppingBasket,
     faSearch,
     faHeart,
-    faShoppingCart
+    faShoppingCart,
+    faShippingFast,
+    faDollarSign,
+    faHeadset,
+    faFacebookF,
+    faTwitter,
+    faAngleLeft,
+    faAngleRight
+    
+
 )
 
 function App() {
@@ -56,8 +73,8 @@ function App() {
     <div className="App">
       <Router>
      <Header />
-
-     <Route exact path="/">
+    <TopBanner />
+    <MidNavigation />
      <Container>
       
       <div className="card-container">
@@ -70,11 +87,14 @@ function App() {
     
     </Container>
 
-     </Route>
+     {/* </Route> */}
      
     <Route exact path='/DisplayProduct'  component={DisplayProduct} />
-   
-    <Route exact path='/Login' component={Login} />
+      <MidBanner />
+      <OtherOptions />
+      <LatestNews />
+      <FeaturedProducts />
+    {/* <Route exact path='/Login' component={Login} /> */}
     
     <Footer />
     </Router>

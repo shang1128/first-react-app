@@ -5,13 +5,17 @@ import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom';
 
 function Header(){
 return (
-    
-<Container>
+    <div>
+        
+ <Container>
+
     <div className="header-top">
+
     <div className="selection">
         <span>EN <select name="" id="" /></span>
         <span>USD <select name="" id="" /></span>
     </div>
+
     <div className="account">
             <Link to="/Login" className="active">
             <FontAwesomeIcon icon="user" /> My Profile
@@ -21,8 +25,10 @@ return (
         <p>$0.00</p>
         <FontAwesomeIcon icon="search" />
     </div>
+
     </div>
-    <h1>RAKUTECH</h1>
+
+    <h1 className="title">RAKUTECH</h1>
 
     <nav>
         <ul>
@@ -40,8 +46,11 @@ return (
 
         </ul>
     </nav>
-   
-</Container>
+
+    </Container>
+
+    </div>
+
 
 )
 }
