@@ -140,9 +140,13 @@ function DisplayProduct(props){
 
                     <div className="btn-option">
                     <div className="btn-counter">
-                    <button onClick={deccrementBtn}>-</button>
-                    <input type="number" value={count} name="" id="" readOnly />
-                    <button onClick={incrementBtn}>+</button>
+                    <button onClick={deccrementBtn}>
+                <FontAwesomeIcon icon="minus"/>
+                </button>
+                <input type="number" value={count} id="" readOnly/>
+                <button onClick={incrementBtn}>
+                <FontAwesomeIcon icon="plus"/>
+                </button>
                     </div>
                     <div className="btn-add-heart">
                     <button><FontAwesomeIcon icon='shopping-cart' />Add to Cart</button>

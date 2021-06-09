@@ -326,6 +326,10 @@
   background: #f6f7f8;
 }
 
+.product-display .product-details .btn-option .btn-counter input:focus {
+  outline: none;
+}
+
 .product-display .product-details .btn-option .btn-counter button {
   border: none;
   width: 35px;
@@ -333,7 +337,11 @@
   color: #379efa;
   background: #f6f7f8;
   font-weight: bolder;
-  font-size: 14pt;
+  font-size: 9pt;
+}
+
+.product-display .product-details .btn-option .btn-counter button:focus {
+  outline: none;
 }
 
 .product-display .product-details .btn-option .btn-add-heart {
@@ -365,6 +373,10 @@
   color: #379efa;
 }
 
+.product-display .product-details .btn-option .btn-add-heart button:first-child:focus {
+  outline: none;
+}
+
 .product-display .product-details .btn-option .btn-add-heart button:last-child {
   padding: 17px 18px;
   border: none;
@@ -373,6 +385,10 @@
 
 .product-display .product-details .btn-option .btn-add-heart button:last-child svg {
   color: #379efa;
+}
+
+.product-display .product-details .btn-option .btn-add-heart button:last-child:focus {
+  outline: none;
 }
 
 .socialmedia {
@@ -473,6 +489,7 @@
   color: #adadad;
   font-weight: bold;
   margin-bottom: 30px;
+  text-align: left;
 }
 
 .items-right-slides {
@@ -493,7 +510,8 @@
   margin: 0 3px;
 }
 
-.items-right-slides-button:hover, .items-right-slides-button :active {
+.items-right-slides-button:hover,
+.items-right-slides-button :active {
   background-color: #44aaf4;
 }
 
@@ -517,6 +535,7 @@
 
 .items-right-ads--price {
   font-size: 20pt;
+  margin-bottom: 30px;
 }
 
 .related-products {

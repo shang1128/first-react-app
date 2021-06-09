@@ -87,7 +87,7 @@ return (
             <li className="ul-li">IPHONE</li>
             <li className="ul-li">IPAD</li>
             <li className="ul-li">MACBOOK</li>
-            <Link to="/display-product" className="ul-li">
+            <Link to="/product-list" className="ul-li">
             ACCESORIES
             </Link>
             

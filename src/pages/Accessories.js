@@ -1,8 +1,10 @@
 import DisplayProduct from "../components/displayProduct/DisplayProduct";
+import ProductList from "../components/productList/ProductList";
 
 const Accessories = () =>{
     return(
-        <DisplayProduct/>
+        // <DisplayProduct/>
+        <ProductList/>
     )
 }
 export default Accessories;
