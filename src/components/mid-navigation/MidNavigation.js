@@ -8,17 +8,17 @@ const MidNavigation = () =>{
             <div>
             <h3 className="title">BEST SELLER</h3>
         <nav>
-            <ul>
-                <li>All</li>
-                <li>Mac</li>
-                <li>iPhone</li>
-                <li>iPad</li>
-                <li>iPod</li>
-                <li>Accessories</li>
+            <ul className="md-ul">
+                <li className="md-li">All</li>
+                <li className="md-li">Mac</li>
+                <li className="md-li">iPhone</li>
+                <li className="md-li">iPad</li>
+                <li className="md-li">iPod</li>
+                <li className="md-li">Accessories</li>
             </ul>
         </nav>
             </div>
-       
+        
         </Container>
     )
 }

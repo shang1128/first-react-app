@@ -5,4 +5,26 @@ div {
 .title {
   margin: 50px 0;
 }
+
+.md-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+}
+
+.md-li {
+  list-style-type: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 8px;
+}
+
+.md-li:hover {
+  border-bottom: 2px solid #46c3f5;
+  cursor: pointer;
+  color: #46c3f5;
+}
 /*# sourceMappingURL=MidNavigation.css.map */

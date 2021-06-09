@@ -1,30 +1,90 @@
-.card{
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 21px;
     border: 1px solid #c7c7c7;
     background-color: #fff;
-    padding: 10px;
-    width: 200px;
-    height: 240px;
+    padding: 30px 15px;
+    // width: 200px;
+    // height: 240px;
 
-    img{
+    .card-image {
+        width: 170px;
+        height: 120px;
+        margin-top: 12px;
+        position: relative;
+        // border: 1px solid red;
+
+        img{
         width: 170px;
         height: 100px;
         margin-top: 12px;
+        }
+        &:hover .card-overlay{
+            cursor: pointer;
+            opacity: 95%;
+        }
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease;
+            background-color: white;
+            gap: 42px;
+            // border: 1px solid red;
+
+            svg{
+                color: #0891bb;
+                opacity: 1;
+            }
+        }
+
+
     }
+
     .price {
         display: flex;
         gap: 10px;
 
-        p:first-child{
+        p:first-child {
             color: #f60000;
         }
-        p:last-child{
+
+        p:last-child {
             color: #c7c7c7;
             text-decoration: line-through;
         }
     }
-   
+
+}
+
+.hot {
+    position: relative;
+
+    &::after {
+        content: "HOT";
+        position: absolute;
+        background-color: #FD2E2E;
+        padding: 5px;
+        left: 10px;
+        top: 10px;
+        font-size: 8pt;
+        color: white;
+    }
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 20px 0;
 }
