@@ -17,11 +17,13 @@ return (
     </div>
 
     <div className="account">
-            <Link to="/Login" className="active">
+            <Link to="/login" className="active">
             <FontAwesomeIcon icon="user" /> My Profile
             </Link>
-        {/* <p> </p> */}
-        <p> <FontAwesomeIcon icon="shopping-basket" /> 0 Items</p>
+        <Link to="/checkout" className="active">
+        <FontAwesomeIcon icon="shopping-basket" />
+        </Link>
+        <p> 0 Items</p>
         <p>$0.00</p>
         <Link to="/checkout">
         <FontAwesomeIcon icon="search" />

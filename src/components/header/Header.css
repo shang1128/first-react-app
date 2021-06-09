@@ -43,6 +43,11 @@
   margin: 60px;
 }
 
+.active {
+  text-decoration: none;
+  color: #000;
+}
+
 .nav-links .nav-burger {
   display: none;
 }

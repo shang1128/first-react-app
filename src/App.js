@@ -6,12 +6,13 @@ import Footer from './components/footer/Footer';
 import { library} from '@fortawesome/fontawesome-svg-core';
 import { fab, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser, faShippingFast,
-  faDollarSign, faHeadset, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons';
+  faDollarSign, faHeadset, faAngleLeft, faAngleRight, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Accessories from './pages/Accessories';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import Checkout from './components/checkout/Checkout';
 
 
 
@@ -33,6 +34,8 @@ library.add(
     faAngleLeft,
     faAngleRight,
     faHeart,
+    faMinus,
+    faPlus
 
 )
 
@@ -51,6 +54,9 @@ function App() {
     </Route>
     <Route  path='/display-product'>
       <Accessories />
+    </Route>
+    <Route  path='/checkout'>
+      <Checkout />
     </Route>
 
     </Switch>
