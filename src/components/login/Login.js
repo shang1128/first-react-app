@@ -7,8 +7,6 @@ function Login (){
     return(
 
              <section className="bg-images">
-        
-
 
         <div className="content-container">
 

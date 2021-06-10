@@ -14,6 +14,7 @@ import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser, fa
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import SingleProduct from './pages/SingleProduct';
 import Register from './components/register/Register';
+import CheckoutOrder from './pages/CheckoutOrder';
 
 
 library.add(
@@ -61,7 +62,7 @@ function App() {
       <SingleProduct/>
     </Route>
     <Route  path='/checkout'>
-      <Checkout />
+      <CheckoutOrder/>
     </Route>
 
     <Route path='/login'>

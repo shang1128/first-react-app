@@ -24,7 +24,7 @@ const Register = () =>{
                 <Link to="/login" className="click">
                 <p className="login">Log in</p>
                 </Link>
-                
+                    
                 </div>
 
                 <form action="">
