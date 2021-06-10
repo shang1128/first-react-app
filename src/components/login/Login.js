@@ -1,41 +1,52 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.scss';
-import Container from '../container/Container'
+import {Link} from 'react-router-dom';
 
 
 function Login (){
     return(
-        <Container>
 
-             <section class="bg-images">
+             <section className="bg-images">
         
-        <div class="content-container">
-            <div class="raku-title">
-                <span class="raku-title--rak">RAKU<span class="raku-title--tech">TECH</span></span>
-                <hr class="raku-line"/>
-                <p class="raku-description">Browse from over 500 devices in your area.</p>
+
+
+        <div className="content-container">
+
+            <div className="raku-title">
+                <span className="raku-title--rak">RAKU<span className="raku-title--tech">TECH</span></span>
+                <hr className="raku-hr"/>
+                <p className="raku-description">Browse from over 500 devices in your area.</p>
             </div>
-          <div class="logform">
-                <p class="signTitle">Sign In</p>
-                <div class="social-buttons">
-                    <button class="s-apple"><img src="./LOGIN_AND_SIGNUP/apple-64.png" alt="" /> SIGN IN WITH APPLE</button>
-                    <button class="s-fb"><img src="./LOGIN_AND_SIGNUP/fb-64.png" alt="" /> SIGN IN WITH FACEBOOK</button>
+
+          <div className="logform">
+                <p className="signTitle">Sign In</p>
+
+                <div className="social-buttons">
+                    <button className="s-apple"><img src="./LOGIN_AND_SIGNUP/apple-64.png" alt="" /> SIGN IN WITH APPLE</button>
+                    <button className="s-fb"><img src="./LOGIN_AND_SIGNUP/fb-64.png" alt="" /> SIGN IN WITH FACEBOOK</button>
                 </div>
-                <p class="or">OR</p>
-                <label for="" class="email">Email</label>   
-                <input type="text" class="input-email" />
+
+                <p className="or">OR</p>
+
+                <form action="">
+                <label for="" className="email">Email</label>   
+                <input type="text" className="input-email" />
                 <label for="" class="pass">Password</label>
-                <input type="password" class="input-password" />
-                <button class="signingin"> <a href="./index.html">SIGN IN</a></button>
-                <p class="agree">By continuing, you agree to accept our
-                    <span class="policy">Privacy Policy & Terms of Service.</span>
+                <input type="password" className="input-password" />
+                </form>
+                
+                <button className="signin">SIGN IN</button>
+
+                <p className="agree">By continuing, you agree to accept our
+                    <span className="policy">Privacy Policy & Terms of Service.</span>
                 </p>
-                <p class="dacc">Don't have an account? <a href="/signUp.html" class="createAcc">Create new account</a></p>
+                <div className="dacc">Don't have an account? <Link to ="/register"className="createAcc">Create new account</Link></div>
             </div>
+
         </div>
     </section>
 
-        </Container>
+       
     )
 
 }

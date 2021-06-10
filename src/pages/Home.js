@@ -5,11 +5,13 @@ import MidBanner from "../components/mid-banner/MidBanner";
 import OtherOptions from "../components/other-options/OtherOptions";
 import LatestNews from "../components/latest-news/LatestNews";
 import FeaturedProducts from "../components/featured-products/FeaturedProducts";
+import HeaderFooter from "../components/HeaderFooter";
 
 
 const Home = () => {
     
     return (
+        <HeaderFooter>
         <div>
             <TopBanner/>
             <MidNavigation/>
@@ -20,6 +22,7 @@ const Home = () => {
             <LatestNews/>
             <FeaturedProducts/>
         </div>
+        </HeaderFooter>
     )
 }
 

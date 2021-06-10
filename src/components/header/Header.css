@@ -6,15 +6,15 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .selection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
   gap: 20px;
 }
 
@@ -27,20 +27,37 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1.2;
-      -ms-flex: 1.2;
-          flex: 1.2;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.account .acc-p {
+  color: #adaeaf;
+}
+
+.account .acc-search {
+  color: #000;
+}
+
+.account .acc-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
 .title {
   text-align: center;
   margin: 60px;
+}
+
+.title .tech {
+  color: red;
 }
 
 .active {
@@ -121,10 +138,10 @@
 .nav-links .navul .home .dropdown::after {
   content: '';
   background-color: transparent;
-  width: 60px;
+  width: 70px;
   height: 18px;
   top: -13px;
-  left: 242px;
+  left: 235px;
   position: absolute;
 }
 
@@ -162,5 +179,9 @@
 
 .nav-links .ul-li:hover .dropdown, .dropdown:hover {
   visibility: visible;
+}
+
+.nav-active {
+  color: red;
 }
 /*# sourceMappingURL=Header.css.map */

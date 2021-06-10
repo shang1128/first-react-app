@@ -1,7 +1,5 @@
 import './App.scss';
 import './fonts/Fonts.css';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 import Checkout from './components/checkout/Checkout';
 import Login from './components/login/Login';
 import Home from './pages/Home';
@@ -9,16 +7,13 @@ import Accessories from './pages/Accessories';
 
 import { library} from '@fortawesome/fontawesome-svg-core';
 import { fab, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
+import { faEye, faEyeSlash, far } from '@fortawesome/free-regular-svg-icons';
 import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser, faShippingFast,
-  faDollarSign, faHeadset, faAngleLeft, faAngleRight, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
+  faDollarSign, faHeadset, faAngleLeft, faAngleRight, faMinus, faPlus, faBars} from '@fortawesome/free-solid-svg-icons';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
-
-
-
-
+import SingleProduct from './pages/SingleProduct';
+import Register from './components/register/Register';
 
 
 library.add(
@@ -39,7 +34,11 @@ library.add(
     faAngleRight,
     faHeart,
     faMinus,
-    faPlus
+    faPlus,
+    faBars,
+    faEye,
+    faEyeSlash
+
 
 )
 
@@ -49,7 +48,6 @@ function App() {
     <div className="App">
       <Router>
 
-     <Header />
     
     <Switch>
 
@@ -59,6 +57,9 @@ function App() {
     <Route  path='/product-list'>
       <Accessories />
     </Route>
+    <Route  path='/display-product'>
+      <SingleProduct/>
+    </Route>
     <Route  path='/checkout'>
       <Checkout />
     </Route>
@@ -67,11 +68,14 @@ function App() {
       <Login/>
       </Route>
 
+      <Route path='/register'>
+      <Register/>
+      </Route>
+
     </Switch>
     
     
 
-    <Footer />
     </Router>
 
     </div>

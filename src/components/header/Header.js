@@ -17,30 +17,42 @@ return (
     </div>
 
     <div className="account">
+            <div>
             <Link to="/login" className="active">
             <FontAwesomeIcon icon="user" /> My Profile
             </Link>
-        <Link to="/checkout" className="active">
+            </div>
+           
+<div className="acc-check">
+<Link to="/checkout" className="active">
         <FontAwesomeIcon icon="shopping-basket" />
         </Link>
-        <p> 0 Items</p>
-        <p>$0.00</p>
-        <Link to="/checkout">
+        <p>0 Items</p>
+        <p className="acc-p">$0.00</p>
+</div>
+        
+<div>
+<Link to="/checkout" className="acc-search">
         <FontAwesomeIcon icon="search" />
         </Link>
+</div>
+       
     </div>
 
     </div>
 
-    <h1 className="title">RAKUTECH</h1>
+    <h1 className="title">RAKU
+    <span className="tech">TECH</span>
+    
+    </h1>
 
     <nav className="nav-links">
-    <div className="nav-burger">
+    {/* <div className="nav-burger">
                     <label id="toggler">
                         <input type="checkbox" />
                         <i class="fas fa-bars"></i>
                     </label>
-                </div>
+                </div> */}
         <ul className="navul">
             <Link to="/" className="ul-li home">
                 HOME

@@ -18,6 +18,7 @@ import imgwd from '../../raw-images/wd.png';
 import gpro from '../../raw-images/mn3.png';
 import Card from '../card/Card';
 import CardList from '../card/CardList';
+import TopNav from '../top-nav/TopNav';
 
 function DisplayProduct(props){
     const imagesBlack = [imgba,imgbb,imgbc,imgbd];
@@ -54,11 +55,16 @@ function DisplayProduct(props){
     }
 
     return (
-        <Container>
+        
+        <div>
+
+            <TopNav/>
+
+            <Container>
             
             <div className="pd-con">
 
-            <div className="pd">
+            <div className="pd-sp">
 
             <div className="product-display">
                 <div className="product-images">
@@ -232,6 +238,10 @@ function DisplayProduct(props){
 
             
         </Container>
+
+        </div>
+
+       
     )
 }
 

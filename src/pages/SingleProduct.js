@@ -1,13 +1,11 @@
 import DisplayProduct from "../components/displayProduct/DisplayProduct";
 import HeaderFooter from "../components/HeaderFooter";
-import ProductList from "../components/productList/ProductList";
 
-const Accessories = () =>{
+const SingleProduct = () =>{
     return(
-        // <DisplayProduct/>
         <HeaderFooter>
-        <ProductList/>
+            <DisplayProduct/>
         </HeaderFooter>
-        )
+    )
 }
-export default Accessories;
+export default SingleProduct;

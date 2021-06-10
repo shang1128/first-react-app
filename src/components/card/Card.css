@@ -89,6 +89,8 @@
   padding: 5px;
   left: 10px;
   top: 10px;
+  font-weight: bolder;
+  letter-spacing: 1px;
   font-size: 8pt;
   color: white;
 }

@@ -3,11 +3,11 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    justify-content: space-between;
 }
 
 .selection {
     display: flex;
-    flex: 4;
     gap: 20px;
 
     select{
@@ -18,14 +18,29 @@
 
 .account {
     display: flex;
-    flex: 1.2;
-    justify-content: space-between;
+    gap: 40px;
     align-items: center;
+
+    .acc-p{
+        color: #adaeaf;
+    }
+    .acc-search{
+        color: #000;
+    }
+    .acc-check{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
 }
 
 .title{
     text-align: center;
     margin: 60px;
+
+    .tech{
+        color: red;
+    }
 }
 
 
@@ -57,11 +72,18 @@
             &:hover{
                 color: #4cbcfd;
             }
+            
+            // &:focus-within{
+            //     color: #379efa;
+            // }
         }
 
         .home{
             position: relative;
-        
+            
+            // &:focus-within{
+            //     color: #379efa;
+            // }
             .home-togler .input{
                 display: none;
             }
@@ -97,10 +119,10 @@
             &::after{
                 content: '';
                 background-color:transparent;
-                width: 60px;
-                height: 18px;
-                top: -13px;
-                left: 242px;
+                width: 70px;
+    height: 18px;
+    top: -13px;
+    left: 235px;
                 position: absolute;
             }
             .dr-li{
@@ -140,4 +162,7 @@
 
 .nav-links .ul-li:hover .dropdown, .dropdown:hover{
     visibility: visible;
+}
+.nav-active{
+    color: red;
 }
