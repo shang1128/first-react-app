@@ -16,7 +16,7 @@ const TopBanner = () =>{
                         <h1 className="ban-title">iPhone X</h1>
                         <p className="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                             Lorem Ipsum has been the industry's standard dummy.</p>
-                        <p>MORE</p>
+                        <p className="tp-more">MORE</p>
                     </div>
                     <img src={b} alt="iphone10"/>
                     <FontAwesomeIcon icon="angle-right" />

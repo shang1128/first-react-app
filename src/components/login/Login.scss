@@ -73,17 +73,10 @@ text-align: left;
     border: none;
     font-size: 9pt;
 
-    img{
-        width: 25px;
-        height: 25px;
+    svg{
+        font-size: 15pt;
     }
    
-    // &:hover, i {
-    //     border: 1.5px solid #000000;
-    //     background-color:transparent;
-    //     color: #000000;
-        
-    // }
 }
 .social-buttons{
     margin: 20px 0;
@@ -107,9 +100,8 @@ text-align: left;
     border: none;
     font-size: 9pt;
 
-    img{
-        width: 25px;
-        height: 25px;
+    svg{
+        font-size: 15pt;
     }
     &:focus{
         outline: none;

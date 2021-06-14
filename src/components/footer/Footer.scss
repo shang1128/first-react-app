@@ -9,8 +9,6 @@
     .box1{
         // border: 1px solid blue;
         width: 400px;
-        // display: flex;
-        // flex-direction: column;
         text-align: left;
 
         h3{
@@ -19,7 +17,6 @@
             margin-bottom: 30px;
         }
         p{
-            // margin: 25px 0;
             line-height: 26px;
         }
     }
@@ -74,4 +71,9 @@
         display: flex;
         gap: 20px;
     }
+}
+
+.ft-hr{
+    border-bottom: 1px solid #fff;
+    opacity: 0.3;
 }

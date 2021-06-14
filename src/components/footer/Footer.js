@@ -10,7 +10,7 @@ function Footer(){
     return(
             <footer>
 
-        <hr />
+        <hr className="ft-hr"/>
 
         <Container>
 
@@ -43,7 +43,7 @@ function Footer(){
 
             </Container>
 
-            <hr />
+            <hr className="ft-hr"/>
         
             <Container>
 
@@ -94,7 +94,7 @@ function Footer(){
         
             </Container>
 
-        <hr />
+        <hr className="ft-hr"/>
         
         <Container>
 

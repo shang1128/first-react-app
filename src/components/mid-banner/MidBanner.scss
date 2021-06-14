@@ -21,6 +21,16 @@
             font-size: 15pt;
             width: 340px;
         }
+        .md-shop{
+            border-bottom: 3px solid transparent;
+            width: 84px;
+            padding-bottom: 5px;
+
+            &:hover{
+                border-bottom: 3px solid #fff;
+                cursor: pointer;
+            }
+        }
     }
     .mid-image{
         position: relative;

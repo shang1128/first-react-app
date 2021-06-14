@@ -11,7 +11,7 @@ import { library} from '@fortawesome/fontawesome-svg-core';
 import { fab, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEye, faEyeSlash, far } from '@fortawesome/free-regular-svg-icons';
 import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser, faShippingFast,
-  faDollarSign, faHeadset, faAngleLeft, faAngleRight, faMinus, faPlus, faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
+  faDollarSign, faHeadset, faAngleLeft, faAngleRight, faMinus, faPlus, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -36,7 +36,6 @@ library.add(
     faHeart,
     faMinus,
     faPlus,
-    faBars,
     faEye,
     faEyeSlash,
     faTimes

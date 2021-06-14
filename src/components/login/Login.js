@@ -1,6 +1,7 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.scss';
 import {Link} from 'react-router-dom';
+import {ImAppleinc,ImFacebook2} from 'react-icons/im';
 
 
 function Login (){
@@ -20,8 +21,8 @@ function Login (){
                 <p className="signTitle">Sign In</p>
 
                 <div className="social-buttons">
-                    <button className="s-apple"><img src="./LOGIN_AND_SIGNUP/apple-64.png" alt="" /> SIGN IN WITH APPLE</button>
-                    <button className="s-fb"><img src="./LOGIN_AND_SIGNUP/fb-64.png" alt="" /> SIGN IN WITH FACEBOOK</button>
+                    <button className="s-apple"><ImAppleinc/> SIGN IN WITH APPLE</button>
+                    <button className="s-fb"><ImFacebook2/> SIGN IN WITH FACEBOOK</button>
                 </div>
 
                 <p className="or">OR</p>

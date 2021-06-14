@@ -1,6 +1,5 @@
 import './ProductList.scss';
-import micon from '../../raw-images/menu.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {CgMenuGridR, CgMenu} from 'react-icons/cg';
 
 
 const ProductListLinks = () =>{
@@ -23,8 +22,8 @@ const ProductListLinks = () =>{
                             
                         </div>
                          <div className="links-btn">
-                             <img src={micon} alt="menu"/>
-                            <FontAwesomeIcon icon="bars"/>
+                         <CgMenuGridR className="menugrid-svg"/>
+                        <CgMenu className="menu-svg"/>
                         </div>
 
                     </div>

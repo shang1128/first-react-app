@@ -17,14 +17,14 @@
     }
     &__popup{
         box-shadow: 5px 5px 18px;
-        margin-top:20vh;
+        margin-top: 20vh;
         position: fixed;
         background-color: white;
-        z-index:3;
-        width: 65rem;
-        height: 33rem;
-        display:flex;
-        border-radius:10px;
+        z-index: 3;
+        width: 48rem;
+        height: 23rem;
+        display: flex;
+        border-radius: 10px;
         .close{
             position: absolute;
             right:-18px;
@@ -41,26 +41,28 @@
             }
         }
         &--content{
-            flex:6;
-            display:flex;
+            justify-content: center;
+            flex: 6 1;
+            display: flex;
             flex-direction: column;
             align-items: center;
-            gap:3rem;
-            padding:5em;
+            grid-gap: 3rem;
+            gap: 1rem;
+            padding: 4em;
             h1{
-                font-size:48px;
+                font-size:28px;
                 color:#22262A;
             }
             span{
                 text-align: center;
-                font-size:16px;
+                font-size:13px;
                 line-height:1.6;
             }
             form{
                 margin-top:5vh;
                 display:flex;
                 input[type=text],button{
-                    padding:20px 30px;
+                    padding:15px 30px;
                     border:1px solid #F1F3F4;
                     outline:none;
                 }
@@ -74,9 +76,13 @@
                 gap:.8rem;
                 justify-content: center;
                 align-items: center;
+
                 input[type=checkbox]{
                     width:15px;
                     height: 15px;
+                }
+                label{
+                    font-size: 10pt;
                 }
             }
         }
@@ -84,6 +90,7 @@
             flex:6;
             img{
                 height:100%;
+                width: 100%;
             }
         }
     }

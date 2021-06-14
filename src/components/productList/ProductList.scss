@@ -93,13 +93,17 @@
         }
         .links-btn{
           color: #b6b6b6;
-          svg{
-            font-size: 19pt;
-            margin-left: 20px;
+          // border: 1px solid red;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 20pt;
+
+          .menugrid-svg:hover{
+            color: #1f8be4;
           }
-          img{
-            width: 20px;
-            
+          .menu-svg:hover{
+            color: #1f8be4;
           }
         }
         

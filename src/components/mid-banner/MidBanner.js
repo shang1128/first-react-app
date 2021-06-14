@@ -10,7 +10,7 @@ const MidBanner = () =>{
                 <div className="md-text">
                 <h1>iPhone 6 Plus</h1>
                 <p className="md-p">Performance and design. Taken right to the edge.</p>
-                <p>SHOP NOW</p>
+                <p className="md-shop">SHOP NOW</p>
                 </div>
                 <div className="mid-image">
                 <img src={mimg} alt="iphone6"/>
