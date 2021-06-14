@@ -1,33 +1,45 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Container from '../container/Container';
 import './DisplayProduct.scss';
 import Star from '../star/Star';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-
-import imgba from '../../raw-images/ba.png';
-import imgbb from '../../raw-images/bb.png';
-import imgbc from '../../raw-images/bc.png';
-import imgbd from '../../raw-images/bd.png';
-
-import imgwa from '../../raw-images/wa.png';
-import imgwb from '../../raw-images/wb.png';
-import imgwc from '../../raw-images/wc.png';
-import imgwd from '../../raw-images/wd.png';
+import { useSelector, useDispatch } from 'react-redux';
+import { add } from '../../features/user/myCartSlice';
 
 import gpro from '../../raw-images/mn3.png';
 import Card from '../card/Card';
 import CardList from '../card/CardList';
 import TopNav from '../top-nav/TopNav';
 
+import { items1 } from '../../data';
+
 function DisplayProduct(props){
-    const imagesBlack = [imgba,imgbb,imgbc,imgbd];
-    const imagesWhite = [imgwa,imgwb,imgwc,imgwd];
+    const headSets = useSelector((state) => state.UIProducts.products.headsets)
+    const products = useSelector((state) => state.products.products);
+    const dispatch = useDispatch();
+    
+    const [imagesFuschia, setImagesFuschia] = useState(headSets[0].imgs);
+    const [imagesRed, setImagesRed] = useState(headSets[1].imgs);
+    const [imagesBlack, setImagesBlack] = useState(headSets[2].imgs);
+    const [imagesWhite, setImagesWhite] = useState(headSets[3].imgs);
+    const [imagesPeach, setImagesPeach] = useState(headSets[4].imgs);
 
     const [ selectedVariants, setSelectedVariants ] = useState(imagesBlack);
-    const [ selectedImg, setSelectedImg ] = useState(imgba);
+    const [ selectedImg, setSelectedImg ] = useState(imagesBlack[0]);
+    const [ toCart, setToCart ] = useState(headSets[2].id);
+    const [ productName, setproductName ] = useState(headSets[2].name);
 
     const [count, setCount] = useState(0);
+
+    const addToCart = () => {
+        if (!count==0){
+            const p = products.filter(product => product.id === toCart)
+        dispatch(add(p[0]));
+        }
+        return;
+        
+    }
 
     const incrementBtn = () =>{
         setCount(count + 1);
@@ -44,14 +56,37 @@ function DisplayProduct(props){
         setSelectedImg(image);
     }
     const onSelectColor = (color) => {
+        if(color === 'fuschia') {
+            setSelectedVariants(imagesFuschia);
+            setSelectedImg(imagesFuschia[0]);
+            setToCart(headSets[0].id);
+            setproductName(headSets[0].name);
+        }
+        if(color === 'red') {
+            setSelectedVariants(imagesRed);
+            setSelectedImg(imagesRed[0]);
+            setToCart(headSets[1].id);
+            setproductName(headSets[1].name);
+        }
         if(color === 'black') {
             setSelectedVariants(imagesBlack);
             setSelectedImg(imagesBlack[0]);
+            setToCart(headSets[2].id);
+            setproductName(headSets[2].name);
         }
         if(color === 'white') {
             setSelectedVariants(imagesWhite);
             setSelectedImg(imagesWhite[0]);
+            setToCart(headSets[3].id);
+            setproductName(headSets[3].name);
         }
+        if(color === 'peach') {
+            setSelectedVariants(imagesPeach);
+            setSelectedImg(imagesPeach[0]);
+            setToCart(headSets[4].id);
+            setproductName(headSets[4].name);
+        }
+        
     }
 
     return (
@@ -71,15 +106,15 @@ function DisplayProduct(props){
                     <img src={selectedImg} alt=""/>
                 <div className="product-small-images">
                     {
-                        selectedVariants.map(img => {
-                            return <img onClick={() => onSelectImg(img)} src={img} alt={"image"} />
+                        selectedVariants.map((img, i) => {
+                            return <img key={i} onClick={() => onSelectImg(img)} src={img} alt={"image"} />
                         })
                     }
                 </div>
                 </div>
                 <div className="product-details">
 
-                    <h3>Beats Solo On Ear Headphones - Black</h3>
+                    <h3>{productName}</h3>
 
                     <div className="rate-review">
                         <Star rate={4} />
@@ -109,12 +144,12 @@ function DisplayProduct(props){
                     <div className="color">
                     <p>Select Color:</p>
 
-                                    <label className="color-option" >
+                                    <label onClick={() => onSelectColor('fuschia')} className="color-option" >
                                     <input name="color" type="radio" className="color-radio" />
                                     <span className="blue"></span>
                                   </label>
                                   
-                                  <label className="color-option">
+                                  <label onClick={() => onSelectColor('red')} className="color-option">
                                     <input name="color" type="radio" className="color-radio" />
                                     <span className="red"></span>
                                   </label>
@@ -128,7 +163,7 @@ function DisplayProduct(props){
                                     <input name="color" type="radio" className="color-radio" />
                                     <span className="white"></span> 
                                   </label> 
-                                  <label className="color-option"> 
+                                  <label onClick={() => onSelectColor('peach')} className="color-option"> 
                                     <input name="color" type="radio" className="color-radio" />
                                     <span className="peach"></span>
                                   </label>
@@ -146,16 +181,12 @@ function DisplayProduct(props){
 
                     <div className="btn-option">
                     <div className="btn-counter">
-                    <button onClick={deccrementBtn}>
-                <FontAwesomeIcon icon="minus"/>
-                </button>
-                <input type="number" value={count} id="" readOnly/>
-                <button onClick={incrementBtn}>
-                <FontAwesomeIcon icon="plus"/>
-                </button>
+                    <button onClick={deccrementBtn}><FontAwesomeIcon icon="minus"/></button>
+                <input type="text" value={count} id="" readOnly/>
+                <button onClick={incrementBtn}><FontAwesomeIcon icon="plus"/></button>
                     </div>
                     <div className="btn-add-heart">
-                    <button><FontAwesomeIcon icon='shopping-cart' />Add to Cart</button>
+                    <button onClick={addToCart}><FontAwesomeIcon icon='shopping-cart' />Add to Cart</button>
                     <button><FontAwesomeIcon icon={['far', 'heart']} /></button>
                     </div>
                     </div>
@@ -209,7 +240,7 @@ function DisplayProduct(props){
 
             <div className="items-right-bestSeller">
                         <h4 className="items-right-bestSeller-h4">BEST SELLER</h4>
-                       <Card hasFirstHot={false} rate={4} price={499} mprice={599} name={'Apple Macbook Pro'} />
+                       <Card hasFirstHot={false} img={items1[2].img} rate={4} price={499} mprice={599} name={'Apple Macbook Pro'} />
                     </div>
                     <div className="items-right-slides">
                         <div className="items-right-slides-button"></div>
@@ -233,7 +264,7 @@ function DisplayProduct(props){
             <div className="related-products">
             <h2 className="related-products-title">RELATED PRODUCTS</h2>
 
-            <CardList/>
+            <CardList items={items1} hasFirstHot={true}/>
             </div>
 
             

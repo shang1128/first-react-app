@@ -1,5 +1,5 @@
 import Checkout from "../components/checkout/Checkout";
-import HeaderFooter from "../components/HeaderFooter";
+import HeaderFooter from "../pages/HeaderFooter";
 import TopNav from "../components/top-nav/TopNav";
 
 

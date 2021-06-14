@@ -1,6 +1,6 @@
 import Container from "../container/Container";
 import './Checkout.scss';
-import CheckoutCard from "./CheckoutCard";
+import CheckoutList from "./CheckOutList";
 
 const Checkout = () =>{
     return(
@@ -13,7 +13,7 @@ const Checkout = () =>{
             </div>
             <hr/>
 
-            <CheckoutCard/>
+            <CheckoutList/>
 
             <div className="ck-payment">
             <div className="voucher">

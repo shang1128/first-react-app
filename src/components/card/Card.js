@@ -1,5 +1,4 @@
 import './Card.scss';
-import cardImage from '../../raw-images/mac.png';
 import Star from '../star/Star';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -9,7 +8,7 @@ return (
 
         <div className={`card ${props.hasFirstHot ? 'hot' : ''}`}>
                 <div className="card-image">
-                <img src={cardImage} alt="Macbook" />
+                <img src={props.img} alt="Macbook" />
                 <div className="card-overlay">
                 <FontAwesomeIcon icon="heart" />
                 <FontAwesomeIcon icon="shopping-cart" />

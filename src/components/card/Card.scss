@@ -20,6 +20,7 @@
         width: 170px;
         height: 100px;
         margin-top: 12px;
+        object-fit: contain;
         }
         &:hover .card-overlay{
             cursor: pointer;
@@ -89,4 +90,18 @@
     gap: 30px;
     justify-content: center;
     margin: 20px 0;
+}
+.load{
+    color: #0891bb;
+    padding-bottom: 5px;
+    margin: 0 auto;
+    width: 90px;
+    border-bottom: 3px solid transparent;
+
+    &:hover{
+        border-bottom: 3px solid #0891bb;
+        cursor: pointer;
+
+
+    }
 }
