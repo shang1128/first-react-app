@@ -98,9 +98,8 @@
   font-size: 9pt;
 }
 
-.s-apple img {
-  width: 25px;
-  height: 25px;
+.s-apple svg {
+  font-size: 15pt;
 }
 
 .social-buttons {
@@ -137,9 +136,8 @@
   font-size: 9pt;
 }
 
-.s-fb img {
-  width: 25px;
-  height: 25px;
+.s-fb svg {
+  font-size: 15pt;
 }
 
 .s-fb:focus {

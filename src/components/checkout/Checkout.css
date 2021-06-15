@@ -9,11 +9,11 @@
 }
 
 .ck-title .tp {
-  margin-right: 30rem;
+  margin-right: 28rem;
 }
 
 .ck-title .tq {
-  margin-right: -30px;
+  margin-right: 30px;
 }
 
 .ck-list {
@@ -31,7 +31,20 @@
 
 .ck-list .del {
   color: red;
-  font-weight: bold;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.ck-list img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ck-list .uprice {
+  width: 80px;
+  text-align: right;
 }
 
 .qty {

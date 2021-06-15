@@ -29,12 +29,23 @@
   width: 340px;
 }
 
+.md-banner .md-text .md-shop {
+  border-bottom: 3px solid transparent;
+  width: 84px;
+  padding-bottom: 5px;
+}
+
+.md-banner .md-text .md-shop:hover {
+  border-bottom: 3px solid #fff;
+  cursor: pointer;
+}
+
 .md-banner .mid-image {
   position: relative;
   width: 550px;
   height: 500px;
   overflow: hidden;
-  top: -101px;
+  top: -100px;
 }
 
 .md-banner .mid-image img {

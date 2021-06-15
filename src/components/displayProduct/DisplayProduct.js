@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import Container from '../container/Container';
 import './DisplayProduct.scss';
 import Star from '../star/Star';

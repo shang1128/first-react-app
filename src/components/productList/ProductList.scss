@@ -132,6 +132,7 @@
             gap: 20px;
             align-items: center;
             margin-bottom: 20px;
+            width: fit-content;
             // border: 1px solid red;
 
             .img{
@@ -140,6 +141,8 @@
 
                 img{
                     height: 130px;
+                    width: 170px;
+                    object-fit: contain;
                 }
 
                 .img-pd{

@@ -11,7 +11,8 @@ const CheckoutList = () =>{
                         <CheckoutCard info={product} />
                     )
                 })
-            }          
+                
+            }  
         </div>
     )
 }

@@ -36,18 +36,18 @@ export const items1 = [
     {
       id: 1,
       img:airpodsmax,
-      name: 'Apple Macbook Pro',
-      rate: 2,
-      price: 499,
-      markdownPrice: 599
+      name: 'AirPods Max',
+      rate: 4,
+      price: 256,
+      markdownPrice: 359
     },
     {
       id: 2,
       img:iphone11red,
-      name: 'Apple Macbook Pro',
-      price: 499,
+      name: 'iPhone 11',
+      price: 489,
       rate: 4,
-      markdownPrice: 599
+      markdownPrice: 796
     },
     {
       id: 3,
@@ -60,10 +60,10 @@ export const items1 = [
     {
       id: 4,
       img:macside,
-      name: 'Apple Macbook Pro',
-      price: 499,
-      rate: 1,
-      markdownPrice: 599
+      name: 'Magic Keyboard for iPad Pro 11-inch',
+      price: 299,
+      rate: 4,
+      markdownPrice: 359
     }
   ]
 
@@ -71,33 +71,33 @@ export const items1 = [
     {
       id: 5,
       img:ipad,
-      name: 'Apple Macbook Pro',
-      rate: 2,
-      price: 499,
-      markdownPrice: 599
+      name: 'iPad (8th Generation)',
+      rate: 4,
+      price: 829,
+      markdownPrice: 1000
     },
     {
       id: 6,
       img:iwatch,
-      name: 'Apple Macbook Pro',
-      price: 499,
+      name: 'Apple Watch',
+      price: 399,
       rate: 4,
-      markdownPrice: 599
+      markdownPrice: 499
     },
     {
       id: 7,
       img:appmac,
-      name: 'Apple Macbook Pro',
-      price: 499,
+      name: 'Apple Macbook Air',
+      price: 415,
       rate: 4,
-      markdownPrice: 599
+      markdownPrice: 529
     },
     {
       id: 8,
       img:airpod,
-      name: 'Apple Macbook Pro',
-      price: 499,
-      rate: 1,
+      name: 'Air Pods Pro',
+      price: 459,
+      rate: 4,
       markdownPrice: 599
     }
   ]

@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Checkout.scss';
 import { useState, useEffect } from 'react';
+import {useDispatch} from 'react-redux';
+import {remove} from '../../features/user/myCartSlice';
 
 const CheckoutCard = ({info}) =>{
+    const dispatch = useDispatch();
     const price = info.price;
     const [uprice, setUprice] = useState(0);
 
@@ -24,10 +27,15 @@ const CheckoutCard = ({info}) =>{
         setUprice(price*count);
     }, [count])
 
+    const removeOnCart = () =>{
+        dispatch(remove(info.id));
+    }
+
+
     return(
         <div>
                 <div className="ck-list">
-                <span className="del">x</span>
+                <span onClick={removeOnCart} className="del">x</span>
                 <img src={info.img ? info.img : info.imgs[0]} alt=""/>
                 <h4>{ info.name }</h4>
                 <p>{`$${price}`}</p>

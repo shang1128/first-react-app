@@ -14,7 +14,7 @@ return (
                 <FontAwesomeIcon icon="shopping-cart" />
                 </div>
                 </div>
-                <p>{ props.name }</p>
+                <p className="card-name">{ props.name }</p>
                 <Star rate={props.rate} />
                 <div className="price">
                 <p>${ props.price }</p>

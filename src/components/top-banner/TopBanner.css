@@ -2,8 +2,7 @@
   width: 100%;
   height: 550px;
   background: linear-gradient(69deg, #de2353 8%, #fc03bc 54%, #6a28ba 96%);
-  position: relative;
-  margin: 0 0 193px 0;
+  margin: 0 0 120px 0;
 }
 
 .banner .banner-content {
@@ -35,13 +34,25 @@
   line-height: 1.6;
 }
 
+.banner .banner-content .text .tp-more {
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent;
+  width: 45px;
+}
+
+.banner .banner-content .text .tp-more:hover {
+  border-bottom: 3px solid #fff;
+  cursor: pointer;
+}
+
 .banner .mini-banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 453px;
-  left: 444px;
+  margin-top: -210px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .banner .mini-banner .first-mini-banner {

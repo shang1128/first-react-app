@@ -10,7 +10,21 @@ import ProductItemList from './ProductItemList';
 import ProductListLinks from './ProductListLinks';
 import TopNav from '../top-nav/TopNav';
 
+import { useEffect, useState } from 'react';
+
 const ProductList = () =>{
+
+    const [fetchdata, setfetchdata] = useState([]);
+
+    useEffect(() =>{
+        fetch('https://fakestoreapi.com/products')
+        .then(res=>res.json())
+        .then(json=>setfetchdata(json))
+            
+    },[])
+
+
+
     return(
         <div>
 
@@ -41,15 +55,21 @@ const ProductList = () =>{
                     </div>
 
                     <ProductListLinks/>
+                    {
+                        (fetchdata.length <= 0) &&
+                <p>Loading.....</p>
+                    }
+    
+                  {
 
-                  
+                  fetchdata.map(item => {
+                      return(
+                        <ProductItemList key={item.id} image={item.image} name={item.title} category={item.category} price={item.price} description={item.description} />
+                      )
+                })
 
-             <ProductItemList/>
-             <ProductItemList/>
-             <ProductItemList/>
-             <ProductItemList/>
-             <ProductItemList/>
-             <ProductItemList/>
+                  }
+           
              
              <div className="pd-numbers">
                 <span>1</span>

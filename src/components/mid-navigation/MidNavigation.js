@@ -6,7 +6,7 @@ const MidNavigation = () =>{
     return(
         <Container>
             <div>
-            <h3 className="title">BEST SELLER</h3>
+            <h3 className="md-title">BEST SELLER</h3>
         <nav>
             <ul className="md-ul">
                 <li className="md-li">All</li>

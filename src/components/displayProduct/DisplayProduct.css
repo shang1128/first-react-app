@@ -373,6 +373,15 @@
   color: #379efa;
 }
 
+.product-display .product-details .btn-option .btn-add-heart button:first-child:hover {
+  background: #0e970e;
+  color: white;
+}
+
+.product-display .product-details .btn-option .btn-add-heart button:first-child:hover svg {
+  color: white;
+}
+
 .product-display .product-details .btn-option .btn-add-heart button:first-child:focus {
   outline: none;
 }
@@ -546,5 +555,9 @@
   text-align: center;
   font-weight: bold;
   letter-spacing: 1.5px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=DisplayProduct.css.map */

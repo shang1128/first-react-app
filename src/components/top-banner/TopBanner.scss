@@ -3,8 +3,8 @@
     height: 550px;
     background: linear-gradient(69deg, rgba(222,35,83,1) 8%, rgba(252,3,188,1) 54%, rgba(106,40,186,1) 96%);
     // border: 1px solid blue;
-    position: relative;
-    margin: 0 0 193px 0;
+    // position: relative;
+    margin: 0 0 120px 0;
 
     .banner-content{
         display: flex;
@@ -40,9 +40,11 @@
     }
     .mini-banner{
         display: flex;
-        position: absolute;
-        top: 453px;
-        left: 16%;
+        // position: absolute;
+        // top: 453px;
+        // left: 16%;
+        margin-top: -210px;
+        justify-content: center;
 
         .first-mini-banner{
             background: #f38282;

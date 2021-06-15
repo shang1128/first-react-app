@@ -12,25 +12,26 @@
   gap: 25px;
   border: 1px solid #c7c7c7;
   background-color: #fff;
-  padding: 10px 15px 30px;
+  padding: 15px 10px 30px;
 }
 
 .card .card-image {
   width: 170px;
-  height: 120px;
-  margin-top: 12px;
+  height: 150px;
+  margin: 0 auto;
   position: relative;
 }
 
 .card .card-image img {
   width: 170px;
-  height: 100px;
-  margin-top: 12px;
+  height: 149px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .card .card-image:hover .card-overlay {
   cursor: pointer;
-  opacity: 95%;
+  opacity: 90%;
 }
 
 .card .card-image .card-overlay {
@@ -53,13 +54,22 @@
           align-items: center;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  background-color: white;
+  background-color: #fafafa;
   gap: 42px;
 }
 
 .card .card-image .card-overlay svg {
   color: #0891bb;
   opacity: 1;
+}
+
+.card .card-name {
+  width: 160px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: .5px;
 }
 
 .card .price {
@@ -103,6 +113,18 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 20px 0;
+}
+
+.load {
+  color: #0891bb;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  width: 90px;
+  border-bottom: 3px solid transparent;
+}
+
+.load:hover {
+  border-bottom: 3px solid #0891bb;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Card.css.map */
