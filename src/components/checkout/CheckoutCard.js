@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Checkout.scss';
 import { useState, useEffect } from 'react';
 import {useDispatch} from 'react-redux';
-import {remove} from '../../features/user/myCartSlice';
+import {remove, addUnitPrice, subUnitPrice} from '../../features/user/myCartSlice';
 
 const CheckoutCard = ({info}) =>{
     const dispatch = useDispatch();
@@ -13,18 +13,20 @@ const CheckoutCard = ({info}) =>{
 
     const incrementBtn = () =>{
         setCount(count + 1);
+        dispatch(addUnitPrice(price))
     }
 
     const deccrementBtn = () =>{
 
         if(count>0){
             setCount(count - 1);
+        dispatch(subUnitPrice(price))
         }
         return;
     }
 
     useEffect(() => {
-        setUprice(price*count);
+        setUprice(Number(price * count).toFixed(2));
     }, [count])
 
     const removeOnCart = () =>{
@@ -36,8 +38,8 @@ const CheckoutCard = ({info}) =>{
         <div>
                 <div className="ck-list">
                 <span onClick={removeOnCart} className="del">x</span>
-                <img src={info.img ? info.img : info.imgs[0]} alt=""/>
-                <h4>{ info.name }</h4>
+                <img src={info.image} alt=""/>
+                <h4>{ info.title }</h4>
                 <p>{`$${price}`}</p>
                 <div className="ctr">
                 <button onClick={deccrementBtn} class='sub'><FontAwesomeIcon icon="minus"/></button>

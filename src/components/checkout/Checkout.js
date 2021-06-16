@@ -1,8 +1,12 @@
 import Container from "../container/Container";
 import './Checkout.scss';
 import CheckoutList from "./CheckOutList";
+import { useSelector } from 'react-redux';
 
 const Checkout = () =>{
+ 
+    const cartSub = useSelector((state) => state.myCart.cUnitPrice);
+
     return(
         <Container>
             <div className="ck-title">
@@ -22,7 +26,7 @@ const Checkout = () =>{
             </div>
             <div className="ck-form">
             <ul className="ck-dul">
-                        <li className="ck-dli"><span>Subtotal</span><span class='sub-total'>$0</span></li>
+                        <li className="ck-dli"><span>Subtotal</span><span class='sub-total'>{`$${cartSub}`}</span></li>
                         <li className="ck-dli"><span>Shipping fee</span><span>$20</span></li>
                         <li className="ck-dli"><span>Coupon</span><span>No</span></li>
             <hr/>

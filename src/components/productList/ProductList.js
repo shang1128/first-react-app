@@ -10,17 +10,21 @@ import ProductItemList from './ProductItemList';
 import ProductListLinks from './ProductListLinks';
 import TopNav from '../top-nav/TopNav';
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+
+import fetchApi from '../../fetchApi';
 
 const ProductList = () =>{
 
     const [fetchdata, setfetchdata] = useState([]);
+    
 
     useEffect(() =>{
-        fetch('https://fakestoreapi.com/products')
-        .then(res=>res.json())
-        .then(json=>setfetchdata(json))
-            
+    fetchApi().then(data => {
+        setfetchdata(data);
+    console.log(data)
+        
+    })
     },[])
 
 
@@ -64,7 +68,7 @@ const ProductList = () =>{
 
                   fetchdata.map(item => {
                       return(
-                        <ProductItemList key={item.id} image={item.image} name={item.title} category={item.category} price={item.price} description={item.description} />
+                        <ProductItemList key={item.id} id={item.id} image={item.image} name={item.title} category={item.category} price={item.price} description={item.description} />
                       )
                 })
 

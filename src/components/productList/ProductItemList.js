@@ -3,12 +3,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import pl1 from '../../raw-images/mac.png';
 import Star from '../star/Star';
 import { Link } from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+import {add} from '../../features/user/myCartSlice';
 
-
+import {getById} from '../../fetchApi';
 
 const ProductItemList = (props) =>{
+    const dispatch = useDispatch()
+    
+    const addToCart = (id) =>{
+        getById(id).then(data => {
+            console.log(data)            
+            dispatch(add(data));
+        })
+    }
 
-   
     return(
 
         <div>
@@ -51,7 +60,7 @@ const ProductItemList = (props) =>{
                             {props.description}
                         </p>
                         <div className="pd-btn">
-                    <button className="btn"><FontAwesomeIcon icon='shopping-cart' />Add to Cart</button>
+                    <button  onClick={() => addToCart(props.id)} className="btn"><FontAwesomeIcon icon='shopping-cart' />Add to Cart</button>
                     <button className="btn"><FontAwesomeIcon icon={['far', 'heart']} /></button>
                     </div>
                     </div>
