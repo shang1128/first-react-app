@@ -2,8 +2,18 @@ import Container from '../container/Container';
 import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux';
+// import {useState, useEffect} from 'react-redux';
 
 function Header(){
+
+    const numberItems = useSelector((state) => state.myCart.cTotalItems);
+
+    // const [pnum, setpnum] = useState()
+
+    console.log("numberItems", numberItems)
+
+
 return (
     <div>
         
@@ -27,7 +37,7 @@ return (
 <Link to="/checkout" className="active">
         <FontAwesomeIcon icon="shopping-basket" />
         </Link>
-        <p>0 Items</p>
+        <p>{numberItems} Items</p>
         <p className="acc-p">$0.00</p>
 </div>
         
