@@ -22,7 +22,7 @@ const ProductList = () =>{
     useEffect(() =>{
     fetchApi().then(data => {
         setfetchdata(data);
-    console.log(data)
+    // console.log(data)
         
     })
     },[])

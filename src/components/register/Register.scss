@@ -94,7 +94,7 @@ text-align: left;
 
 }
 .in-password{
-    border: 1px solid lightgray;
+    border: 1px solid lightgray ;
     background-color: transparent;
     width: 100%;
     padding: 8px 40px 8px 10px;
@@ -107,7 +107,7 @@ text-align: left;
 .conpass{
     position: relative;
     
-    svg{
+    .pass-svg{
         position: absolute;
         top:34px;
         right: 11px;
@@ -136,4 +136,15 @@ text-align: left;
     font-size: 9pt;
 
     // border: 1px solid red;
+}
+.red{
+    &:focus{
+outline: 1px solid red;
+    }
+}
+.green{
+    &:focus{
+        outline: 1px solid green;
+
+    }
 }

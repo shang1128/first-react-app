@@ -5,7 +5,7 @@ export const myCartSlice = createSlice({
     initialState:{
        cart: [],
        cUnitPrice:0,
-       cTotalItems:0
+       cTotalItems:0,
     },
     reducers:{
        add: (state, action) => {
@@ -24,13 +24,11 @@ export const myCartSlice = createSlice({
            }
            state.cUnitPrice = state.cUnitPrice;
         },
-        addTotalItems: (state, action) =>{
-            if(state.cTotalItems>0){
-            state.cTotalItems = state.cTotalItems + action.payload;
-            }
-            state.cTotalItems = state.cTotalItems;
+        numberofCarts: (state, action) =>{
+            state.cTotalItems = action.payload;
         }
+       
     }
 })  
-export const {add, remove, addUnitPrice, subUnitPrice, addTotalItems} = myCartSlice.actions
+export const {add, remove, addUnitPrice, subUnitPrice, numberofCarts} = myCartSlice.actions
 export default myCartSlice.reducer

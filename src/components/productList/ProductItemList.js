@@ -3,20 +3,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import pl1 from '../../raw-images/mac.png';
 import Star from '../star/Star';
 import { Link } from 'react-router-dom';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {add} from '../../features/user/myCartSlice';
 
 import {getById} from '../../fetchApi';
 
 const ProductItemList = (props) =>{
     const dispatch = useDispatch()
-    
+    const cartList = useSelector(state => state.myCart.cart);
+
     const addToCart = (id) =>{
-        getById(id).then(data => {
-            console.log(data)            
+        for(let i = 0; i < cartList.length; i++) {
+            if (cartList[i].id === id) {
+                alert('already add to cart!')
+                return;
+            }
+        }
+        getById(id).then(data=>{
             dispatch(add(data));
         })
     }
+    
 
     return(
 

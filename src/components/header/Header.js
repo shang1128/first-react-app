@@ -2,16 +2,21 @@ import Container from '../container/Container';
 import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom';
-import {useSelector} from 'react-redux';
-// import {useState, useEffect} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {useEffect} from 'react';
+import { numberofCarts} from '../../features/user/myCartSlice';
+
 
 function Header(){
+    const dispatch = useDispatch();
 
     const numberItems = useSelector((state) => state.myCart.cTotalItems);
+    const cartItem = useSelector(state => state.myCart.cart);
 
-    // const [pnum, setpnum] = useState()
+    useEffect(() => {
+        dispatch(numberofCarts(cartItem.length))
+    }, [cartItem])
 
-    console.log("numberItems", numberItems)
 
 
 return (
