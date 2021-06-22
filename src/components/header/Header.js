@@ -37,14 +37,13 @@ return (
             <FontAwesomeIcon icon="user" /> My Profile
             </Link>
             </div>
-           
+            <Link to="/checkout" className="active">      
 <div className="acc-check">
-<Link to="/checkout" className="active">
         <FontAwesomeIcon icon="shopping-basket" />
-        </Link>
         <p>{numberItems} Items</p>
         <p className="acc-p">$0.00</p>
 </div>
+</Link>
         
 <div>
 <Link to="/checkout" className="acc-search">

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Star from '../star/Star';
 import { Link } from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
-import {add} from '../../features/user/myCartSlice';
+import {add, setSingleProduct} from '../../features/user/myCartSlice';
 
 import {getById} from '../../fetchApi';
 
@@ -22,6 +22,17 @@ const ProductItemList = (props) =>{
         getById(id).then(data=>{
             dispatch(add(data));
         })
+    }
+
+    const viewSingleProduct = () =>{
+        dispatch(setSingleProduct({
+            id: props.id,
+            image: props.image,
+            title: props.name,
+            category: props.category,
+            description: props.description,
+            price: props.price
+        }))
     }
     
 
@@ -44,8 +55,8 @@ const ProductItemList = (props) =>{
 
                     <div className="pd-content">
 
-                    <Link to="/display-product" className="click">
-                    <h3 className="content-h3">{props.name}</h3>
+                    <Link to="/display-product"  className="click">
+                    <h3 onClick={viewSingleProduct} className="content-h3">{props.name}</h3>
                     </Link>
 
                         <div className="small-details">

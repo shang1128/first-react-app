@@ -39,7 +39,7 @@ const CheckoutCard = ({info}) =>{
                 <div className="ck-list">
                 <span onClick={removeOnCart} className="del">x</span>
                 <img src={info.image} alt=""/>
-                <h4>{ info.title }</h4>
+                <h4 className="ck-h4">{ info.title }</h4>
                 <p>{`$${price}`}</p>
                 <div className="ctr">
                 <button onClick={deccrementBtn} class='sub'><FontAwesomeIcon icon="minus"/></button>

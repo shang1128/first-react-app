@@ -15,6 +15,7 @@ import TopNav from '../top-nav/TopNav';
 import { items1 } from '../../data';
 
 function DisplayProduct(props){
+    const sproduct = useSelector((state) => state.myCart.singleProduct);
     const headSets = useSelector((state) => state.UIProducts.products.headsets)
     const products = useSelector((state) => state.products.products);
     const dispatch = useDispatch();
@@ -34,8 +35,8 @@ function DisplayProduct(props){
 
     const addToCart = () => {
         if (!count==0){
-            const p = products.filter(product => product.id === toCart)
-        dispatch(add(p[0]));
+            // const p = products.filter(product => product.id === toCart)
+        dispatch(add(sproduct));
         }
         return;
         
@@ -103,18 +104,21 @@ function DisplayProduct(props){
 
             <div className="product-display">
                 <div className="product-images">
-                    <img src={selectedImg} alt=""/>
-                <div className="product-small-images">
+                    <img src={sproduct.image ? sproduct.image : selectedImg} alt=""/>
+                {
+                    !sproduct.image &&
+                    <div className="product-small-images">
                     {
                         selectedVariants.map((img, i) => {
                             return <img key={i} onClick={() => onSelectImg(img)} src={img} alt={"image"} />
                         })
                     }
-                </div>
+                    </div>
+               }
                 </div>
                 <div className="product-details">
 
-                    <h3>{productName}</h3>
+                    <h3>{sproduct.title ? sproduct.title : productName}</h3>
 
                     <div className="rate-review">
                         <Star rate={4} />
@@ -125,7 +129,7 @@ function DisplayProduct(props){
                     <hr className="hr"/>
 
                     <div className="price">
-                    <p>$499</p>
+                    <p>${sproduct.price ? sproduct.price : 499}</p>
                     <p>$599</p>
                     </div>
 
@@ -134,7 +138,7 @@ function DisplayProduct(props){
                     </div>
 
                      <div className="category">
-                     <p>Category:</p> <p>Accessories</p>
+                    <p>Category:</p> <p>{sproduct.category ? sproduct.category : 'Accessories' }</p>
                     </div>
 
                     <p className="free">Free Shipping</p>
