@@ -2,9 +2,42 @@
 import './Login.scss';
 import {Link} from 'react-router-dom';
 import {ImAppleinc,ImFacebook2} from 'react-icons/im';
+import {checkAcc} from '../../fetchApi'
+import { useState } from 'react';
 
 
 function Login (){
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [access, setAccess] = useState('false')
+    
+
+    function emailonChange(e){
+        setEmail(e.target.value)
+    }
+    function passwordonChange(e){
+        setPassword(e.target.value)
+    }
+
+const onClickLogin = () =>{
+
+    if(!email || !password) return;
+    const load ={
+        email,
+        password
+    }
+    checkAcc(load).then(data=>{
+        if(data.id) {
+            localStorage.setItem('rakuten_authenticated', "true");
+            window.location.pathname='/'
+        }
+    })
+    setEmail('')
+    setPassword('')
+}
+
+
     return(
 
              <section className="bg-images">
@@ -29,17 +62,17 @@ function Login (){
 
                 <form action="">
                 <label for="" className="email">Email</label>   
-                <input type="text" className="input-email" />
+                <input onChange={emailonChange} type="text" value={email} className="input-email" />
                 <label for="" class="pass">Password</label>
-                <input type="password" className="input-password" />
+                <input onChange={passwordonChange} type="password" value={password} className="input-password" />
                 </form>
                 
-                <button className="signin">SIGN IN</button>
+                <button onClick={onClickLogin} className="signin">SIGN IN</button>
 
                 <p className="agree">By continuing, you agree to accept our
                     <span className="policy">Privacy Policy & Terms of Service.</span>
                 </p>
-                <div className="dacc">Don't have an account? <Link to ="/register"className="createAcc">Create new account</Link></div>
+                <div className="dacc">Don't have an account? <Link to ="/register" className="createAcc">Create new account</Link></div>
             </div>
 
         </div>

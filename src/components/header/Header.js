@@ -33,7 +33,7 @@ return (
 
     <div className="account">
             <div>
-            <Link to="/login" className="active">
+            <Link to="/profile" className="active">
             <FontAwesomeIcon icon="user" /> My Profile
             </Link>
             </div>

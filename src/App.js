@@ -14,6 +14,9 @@ import { faHeart, faSearch, faShoppingBasket, faShoppingCart, faStar, faUser, fa
   faDollarSign, faHeadset, faAngleLeft, faAngleRight, faMinus, faPlus, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute';
+import NoneProtectedRoute from './components/NoneProtectedRoute';
+import UserProfile from './components/UserProfile';
 
 
 
@@ -52,9 +55,7 @@ function App() {
     
     <Switch>
 
-    <Route exact path='/'>
-      <Home />
-    </Route>
+    <ProtectedRoute exact path='/' component={Home} />
     <Route  path='/product-list'>
       <Accessories />
     </Route>
@@ -65,13 +66,10 @@ function App() {
       <CheckoutOrder/>
     </Route>
 
-    <Route path='/login'>
-      <Login/>
-      </Route>
+    <NoneProtectedRoute exact path='/login' component={Login} />
+    <NoneProtectedRoute exact path='/register' component={Register} />
 
-      <Route path='/register'>
-      <Register/>
-      </Route>
+    <ProtectedRoute exact path='/profile' component={UserProfile} />
 
     </Switch>
     

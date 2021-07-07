@@ -2,8 +2,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import './Register.scss';
 import { useState } from 'react';
+import { addUser, getUser } from '../../fetchApi';
+import { useDispatch } from "react-redux";
+import { add } from "../../features/user/userSlice";
 
 const Register = () =>{
+const dispatch=useDispatch();
 
 const [fullName, setFullName] = useState();
 const [email, setEmail] = useState();
@@ -57,35 +61,32 @@ function minPassword(password){
     }
 }
 
-function createUser(obj) {
-    let users = localStorage.getItem('users');
-    if (!users) {
-        users  = [];
-        users.push(obj);
-        localStorage.setItem('users', JSON.stringify(users));
-        return;
-    }
-    console.log(JSON.parse(users));
-}
+// function createUser(obj) {
+//     let users = localStorage.getItem('users');
+//     if (!users) {
+//         users  = [];
+//         users.push(obj);
+//         localStorage.setItem('users', JSON.stringify(users));
+//         return;
+//     }
+//     console.log(JSON.parse(users));
+// }
 
 const onClickRegister = (e) =>{
     e.preventDefault();
     
-    if(validateEmail(email)){
-        if(minPassword(password)){
-            const obj = {
-                fullName,
-                email,
-                password
-            }
-            createUser(obj);
-            console.log(localStorage.getItem('users'));
-            return;
-        }
-        console.log('invalid password')
+    const load = {
+        firstName: fullName,
+        email,
+        password
     }
-    console.log('invalid email')
-
+    addUser(load).then(data => {
+        dispatch(add(data));
+        setFullName("");
+        setEmail("");
+        setPassword("");
+        window.location.pathname="/login"
+    })
 }
 
     return(
